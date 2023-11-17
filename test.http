@@ -248,11 +248,11 @@ POST http://localhost:5050/posts/create HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "The creation of the legendary katanas",
-    "img": "https://cdn2.veltra.com/ptr/20220425000804_416428329_15863_0.jpg?imwidth=800&impolicy=custom",
-    "description": "Katana were mainly used by the samurai, the military nobility of feudal Japan (1185-1600) up through the Edo period (1603–1868). The increased popularity of the katana among samurai came about because of the changing nature of close-combat warfare. The quicker draw of this sword was well suited to combat where victory depended heavily on fast response times. The katana was worn thrust through a belt-like sash (obi) with the sharpened edge facing up. Ideally, samurai could draw the sword and cut the enemy in a single motion. The first use of the term katana to describe a sword occurs as early as the Kamakura period (1185–1333), but the actual history of bladed weapon craftsmanship in Japan stretches back over twenty centuries. At first, Japanese swords were simple variations of the Chinese swords that were straight, double-edged iron blades. The first original Japanese swords that are considered the precursor of the 'modern' katana began to appear during the early Heian period (around 700 CE).",
+    "title": "Decoration",
+    "img": "https://images.squarespace-cdn.com/content/v1/5913c9bde4fcb5711ce79857/1543292563478-SM186T2YST23EUQGRNRX/saitama_japanese_sword_katana_268.jpg?format=1000w",
+    "description": "Almost all blades are decorated, although not all blades are decorated on the visible part of the blade. Once the blade is cool and the mud is scraped off, the blade has designs and grooves cut into it. One of the most important markings on the sword is performed here: the file markings. These are cut into the tang (nakago), or the hilt section of the blade, during shaping, where they will be covered by a tsuka or hilt later. The tang is never supposed to be cleaned: doing this can cut the value of the sword in half or more. The purpose is to show how well the blade steel ages. Different types of file markings are used, including horizontal, slanted, and checked, known as ichi-monji, ko-sujikai, sujikai, ō-sujikai, katte-agari, shinogi-kiri-sujikai, taka-no-ha, and gyaku-taka-no-ha. A grid of marks, from raking the file diagonally both ways across the tang, is called higaki, whereas specialized file marks are called kesho-yasuri. Lastly, if the blade is very old, it may have been shaved instead of filed. This is called sensuki. While ornamental, these file marks also serve the purpose of providing an uneven surface which bites well into the hilt which fits over it. It is this pressure fit for the most part that holds the hilt in place, while the mekugi pin serves as a secondary method and a safety.",
     "source": "toki.tokio.com",
-    "subtitle": "A brief history of the Katana"
+    "subtitle": "The final part of the realization"
 }
 
 ####
