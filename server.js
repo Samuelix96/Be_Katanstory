@@ -17,6 +17,8 @@ const registrationRoute = require('./Routes/registration');
 const forgetRoute = require('./Routes/forget');
 const resetRoute = require('./Routes/reset');
 const stripeRoute = require('./Routes/stripe');
+const cron = require('node-cron');
+const axios = require('axios');
 
 const app = express();
 
@@ -34,6 +36,15 @@ app.use('/', registrationRoute);
 app.use('/', forgetRoute);
 app.use('/', resetRoute);
 app.use('/', stripeRoute);
+
+cron.schedule('*/30 * * * *', async () => {
+  try {
+    const response = await axios.get(`${process.env.CLIENT_URL}/posts`);
+    console.log('Richiesta eseguita con successo:', response.data);
+  } catch (error) {
+    console.error('Errore durante la richiesta:', error.message);
+  }
+});
 
 mongoose.connect(`${process.env.MONGODB_URL}`, {
   useNewUrlParser: true,

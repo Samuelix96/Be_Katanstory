@@ -5,17 +5,6 @@ const isAdmin = require('../Middlewares/isAdmin');
 const posts = express.Router();
 const PostsModel = require('../Models/posts');
 require('dotenv').config();
-const cron = require('node-cron');
-const axios = require('axios');
-
-cron.schedule('*/30 * * * *', async () => {
-  try {
-    const response = await axios.get(`${process.env.CLIENT_URL}/posts`);
-    console.log('Richiesta eseguita con successo:', response.data);
-  } catch (error) {
-    console.error('Errore durante la richiesta:', error.message);
-  }
-});
 
 posts.get('/posts', async (req, res) => {
   try {
