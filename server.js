@@ -37,15 +37,6 @@ app.use('/', forgetRoute);
 app.use('/', resetRoute);
 app.use('/', stripeRoute);
 
-cron.schedule('*/30 * * * *', async () => {
-  try {
-    const response = await axios.get(`${process.env.CLIENT_URL}/posts`);
-    console.log('Richiesta eseguita con successo:', response.data);
-  } catch (error) {
-    console.error('Errore durante la richiesta:', error.message);
-  }
-});
-
 mongoose.connect(`${process.env.MONGODB_URL}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
