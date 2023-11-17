@@ -17,8 +17,6 @@ const registrationRoute = require('./Routes/registration');
 const forgetRoute = require('./Routes/forget');
 const resetRoute = require('./Routes/reset');
 const stripeRoute = require('./Routes/stripe');
-const cron = require('node-cron');
-const axios = require('axios');
 
 const app = express();
 
