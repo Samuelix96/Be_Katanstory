@@ -1,0 +1,269 @@
+#! ARMORS
+####
+POST http://localhost:5050/armors/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "img": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2021/11/top-12-scaled.jpg",
+    "image2": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2021/11/kabuto-4-scaled.jpg",
+    "image3": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2021/11/naname-5-scaled.jpg",
+    "image4": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2021/11/yuko-1-scaled.jpg",
+    "image5": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2021/11/ushiro-1-scaled.jpg",
+    "description": "Period: middle of the Edo Period appraised by The Association for the Research and Preservation of Japanese Helmets and Armor",
+    "price": 78444,
+    "title": "Antique Brown Lacquered Mid Edo Period Samurai Armor",
+    "helmet": "Helmet bowl: brown lacquered Kabuto (helmet) The surface is coated with brown lacquer.",
+    "mask": "Menpo (face guard): brown lacquered iron half mask, This type of half mask was popular as it was easy to breathe compared to the full mask that covers his nose",
+    "armor": "Nimai Do was named after the fact that Nimai means two plates, and Do means torso in Japanese. Instead of using a large number of small lamellar plates called Kozane, this cuirass used large rectangular shaped iron plates riveted.",
+    "sleeves": "lacquered iron Kusazuri laced with navy blue thread, Kusazuri is a skirt of plates attached to the cuirass"
+}
+
+####
+GET http://localhost:5050/armors?page=1 HTTP/1.1
+
+####
+GET http://localhost:5050/armors/bytitle?title=hon
+
+####
+
+GET http://localhost:5050/armors/6542fc41fd5a56d15beda042 HTTP/1.1
+
+####
+
+PATCH http://localhost:5050/armors/update/6555898006c6bb0b383e5e49 HTTP/1.1
+Content-Type: application/json
+
+{
+    "price": "48009"
+}
+
+####
+####
+
+PATCH http://localhost:5050/armors/update/6555874906c6bb0b383e5e47 HTTP/1.1
+Content-Type: application/json
+
+{
+    "price": "45290"
+}
+
+####
+
+
+
+#! HELMETS
+####
+POST http://localhost:5050/helmets/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "img": "",
+    "image2": "",
+    "image3": "",
+    "image4": "",
+    "image5": "",
+    "title": "",
+    "price": ,
+    "description": "",
+    "height" : ,
+    "weight": ,
+    "subtitle": ""
+}
+
+####
+GET http://localhost:5050/helmets HTTP/1.1
+
+####
+GET http://localhost:5050/helmets/bytitle?title=se
+
+####
+
+
+
+
+
+#! KATANAS
+####
+POST http://localhost:5050/katanas/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "category": "new",
+    "img": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2023/08/toushin-saya-9-scaled.jpg",
+    "image2": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2023/08/toushin-saya1-9-scaled.jpg",
+    "image3": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2023/08/tuba-up-8-scaled.jpg",
+    "image4": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2023/08/toushinDSC00023-scaled.jpg",
+    "image5": "https://www.samuraimuseum.jp/shop/wp-content/uploads/2023/08/nakago1-11-scaled.jpg",
+    "width": 2.5,
+    "thickness":0.75 ,
+    "age": "The second year of the Tenmei era (1782)",
+    "location": "Satsuma province (Today’s Kagoshima prefecture)",
+    "price": 20999,
+    "length": 71,
+    "description": "This blade was signed by Satsuyo Shi Motohira (薩陽士元平) in the second year of the Tenmei ear (1782). Motohira is one of the most renowned swordsmiths in Satsuma domain (Today’s Kagoshima prefecture) during the late Edo period. Satsuyo Shi means Samurai who served Satsuma domain.",
+    "title": "Oku Motonao"
+}
+
+####
+GET http://localhost:5050/katanas HTTP/1.1
+####
+GET http://localhost:5050/katanas/6541432a3c98c3815ebe3b42
+
+####
+GET http://localhost:5050/katanas/title/pro HTTP/1.1
+
+####
+
+GET http://localhost:5050/katanas/category/new HTTP/1.1
+
+####
+
+DELETE http://localhost:5050/katanas/delete/654143353c98c3815ebe3b44
+
+####
+
+PATCH http://localhost:5050/katanas/update/65566940961056036e025901     HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Tachibana Munehiro"
+}
+
+
+
+
+
+
+#! STANDS 
+####
+POST http://localhost:5050/stands/create HTTP/1.1
+Content-Type: application/json
+
+{
+    
+    "img": "https://d3524jlyu2md0e.cloudfront.net/20/16172396397267.webp",
+    "image2": "https://d3524jlyu2md0e.cloudfront.net/a9/16172396544468.webp",
+    "image3": "https://d3524jlyu2md0e.cloudfront.net/93/16172396693605.webp",
+    "image4": "https://d3524jlyu2md0e.cloudfront.net/0d/16172396838183.webp",
+    "image5": "https://d3524jlyu2md0e.cloudfront.net/b1/16172396981976.webp",
+    "title": "Handmade Natural Bamboo Wooden Double Tier ",
+    "price": 49.00,
+    "subtitle": "Katana Sword Bracket Stand Holder Display Rack Stand",
+    "description": "Shows off your samurai sword collection without distracting from their artistry.",
+    "material": "Good quality, bamboo wood frame, easy to assemble.",
+    "type": "2 layer sword stand"
+}
+
+####
+GET http://localhost:5050/stands HTTP/1.1
+
+####
+GET http://localhost:5050/stands/bytitle?title=su
+
+####
+
+GET http://localhost:5050/stands/65553cb8fbe0eeebe14d1ed2
+
+####
+
+
+####
+DELETE http://localhost:5050/stands/delete/65553cb8fbe0eeebe14d1ed2 HTTP/1.1
+
+####
+
+PATCH http://localhost:5050/stands/update/65554248fbe0eeebe14d1ee5 
+Content-Type: application/json
+
+{
+    "title":"Handmade Wooden Triple Tier Katana Stand "
+}
+
+
+
+
+#! USERS 
+####
+POST http://localhost:5050/users/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Samuele",
+    "lastName": "Bagorha",
+    "nickName": "Samuelix96",
+    "email": "darksamuelix@gmail.com",
+    "password": "ghostof77",
+    "birth": "7 aprile",
+    "role":"admin",
+    "avatar": "https://hips.hearstapps.com/hmg-prod/images/ghost-of-tsushima-01-1595861990.jpg"
+}
+
+####
+GET http://localhost:5050/users HTTP/1.1
+
+####
+GET http://localhost:5050/users/bynickName?nickName=e
+
+####
+
+
+#! REGISTRATION
+
+####
+
+POST http://localhost:5050/registration HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Manna",
+    "lastName": "ilRE",
+    "nickName": "mannacaruso",
+    "email": "manna@gmail.com",
+    "password": "manna",
+    "birth": "4 maggio",
+    
+    "avatar": "data:image/jpeg;base64,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"
+}
+
+####
+
+#! LOGIN 
+####
+
+POST http://localhost:5050/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "lewis44@gmail.com",
+    "password": "lewis44"
+}
+
+####
+
+#! POSTS
+
+####
+
+POST http://localhost:5050/posts/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "The creation of the legendary katanas",
+    "img": "https://cdn2.veltra.com/ptr/20220425000804_416428329_15863_0.jpg?imwidth=800&impolicy=custom",
+    "description": "Katana were mainly used by the samurai, the military nobility of feudal Japan (1185-1600) up through the Edo period (1603–1868). The increased popularity of the katana among samurai came about because of the changing nature of close-combat warfare. The quicker draw of this sword was well suited to combat where victory depended heavily on fast response times. The katana was worn thrust through a belt-like sash (obi) with the sharpened edge facing up. Ideally, samurai could draw the sword and cut the enemy in a single motion. The first use of the term katana to describe a sword occurs as early as the Kamakura period (1185–1333), but the actual history of bladed weapon craftsmanship in Japan stretches back over twenty centuries. At first, Japanese swords were simple variations of the Chinese swords that were straight, double-edged iron blades. The first original Japanese swords that are considered the precursor of the 'modern' katana began to appear during the early Heian period (around 700 CE).",
+    "source": "toki.tokio.com",
+    "subtitle": "A brief history of the Katana"
+}
+
+####
+GET http://localhost:5050/posts HTTP/1.1
+
+####
+GET http://localhost:5050/posts/bytitle?title=h
+
+####
+
+DELETE http://localhost:5050/posts/delete/654c0a58ae558390daad8526 HTTP/1.1
+
+####
+
